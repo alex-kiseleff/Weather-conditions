@@ -1,0 +1,31 @@
+@import '../../styles/index';
+
+.header {
+    background: var(--color-bg-header);
+    display: flex;
+    font-family: var(--SF-bold);
+    height: 4.063rem;
+    max-width: 100%;
+
+    &__container {
+        align-items: center;
+        display: flex;
+        max-width: var(--screen-desktop);
+        padding: 1.094rem 1.438rem;
+    }
+
+    &__title {
+        color: var(--color-text-header);
+    }
+
+    .logo {
+        height: 100%;
+        width: 50px;
+    }
+
+    .logo use {
+        height: 50px;
+        //padding: 1.094rem 1.438rem;
+        width: 50px;
+    }
+}

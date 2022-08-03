@@ -1,0 +1,11 @@
+@import '../../styles/index';
+
+.main-page {
+    background: var(--color-bg-page-main);
+    height: 100%;
+    max-width: var(--screen-desktop);
+
+    &__container {
+        background: #000;
+    }
+}

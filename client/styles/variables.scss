@@ -1,0 +1,31 @@
+:root {
+    /* цвета */
+    --color-bg-page-main: #161b30;
+    --color-bg-page-favorite: #161b30;
+    --color-bg-page-search: #161b30;
+    --color-bg-header: #2a2f45;
+    --color-bg-footer: #161b30;
+    --color-text-header: #fff;
+
+    /* размеры */
+    --screen-desktop: 1152px;
+
+    /* временные задержки */
+    --durations-300ms: '0.3s';
+
+    /* шрифты */
+    --SF-bold: 'SF Pro Display bold';
+    --SF-medium: 'SF Pro Display medium';
+    --SF-regular: 'SF Pro Display regular';
+
+    /*break point*/
+    --min-width-XS: '0';
+    --max-width-SM: '575.9px';
+    --min-width-SM: '576px';
+    --max-width-MD: '767.9px';
+    --min-width-MD: '768px';
+    --max-width-LG: '991.9px';
+    --min-width-LG: '992px';
+    --max-width-XL: '1399.9px';
+    --min-width-XL: '1400px';
+}

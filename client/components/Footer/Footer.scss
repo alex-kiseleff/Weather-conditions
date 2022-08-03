@@ -1,0 +1,12 @@
+@import '../../styles/index';
+
+.footer {
+    background: var(--color-bg-footer);
+    height: 4.063rem;
+    max-width: 100%;
+
+    &__container {
+        flex-shrink: 0;
+        max-width: var(--screen-desktop);
+    }
+}
