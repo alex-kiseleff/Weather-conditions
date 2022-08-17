@@ -62,6 +62,9 @@ const InputSearch = () => {
         <div className={'input-search'}>
             <input
                 onChange={handlerFetch}
+                onKeyPress={(e) => {
+                    if (e.key === 'Enter') e.preventDefault();
+                }}
                 value={inputValue}
                 className={'input-search__input'}
                 type={'text'}

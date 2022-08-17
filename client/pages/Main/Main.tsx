@@ -15,8 +15,6 @@ const Main = () => {
     const { favourites } = state;
 
     useEffect(() => {
-        console.log({ state });
-
         if (state.currentCity.id) {
             setState({ ...state, inputValue: '' });
             navigate('/details');

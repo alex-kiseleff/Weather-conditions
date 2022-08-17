@@ -13,7 +13,7 @@ import Sunset from '../../components/Sunset/Sunset';
 import TemperatureBlock from '../../components/TemperatureBlock/TemperatureBlock';
 import { IData, IIcons } from '../../interfaces/interfaces';
 import './Details.scss';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const propsIconFavourites: IIcons = {
     idToSprite: 'favourites',
@@ -23,10 +23,15 @@ const propsIconFavourites: IIcons = {
 };
 
 const Details = () => {
+    const navigate = useNavigate();
     const location = useLocation();
     const { state, setState } = useContext(Context);
     const { currentCity, favourites } = state;
     const { checked } = currentCity;
+
+    if (!currentCity.id) {
+        navigate('/');
+    }
 
     useEffect(() => {
         if (checked) {
@@ -42,11 +47,8 @@ const Details = () => {
             const newFavourites = favourites.filter(
                 (item: IData) => item.id !== currentCity.id
             );
-            console.log({ newFavourites });
-
             setState({ ...state, favourites: newFavourites });
         }
-        console.log({ favourites });
     }, [checked]);
 
     // добавление модификатора checked для стилей

@@ -1,5 +1,5 @@
 /**
- * @component Header - голова сайта.
+ * @component Header - шапка сайта.
  */
 import React from 'react';
 import { useLocation } from 'react-router-dom';
