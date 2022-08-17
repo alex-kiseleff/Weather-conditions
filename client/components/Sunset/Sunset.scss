@@ -1,0 +1,12 @@
+@import '../../styles/index';
+
+.sunset {
+    color: var(--color-text-sunset);
+    font-family: var(--SF-regular);
+    font-size: var(--size-font-sunset);
+    line-height: 110.7%;
+
+    @media (max-width: 576px) {
+        font-size: var(--size-font-sunset-mobile);
+    }
+}

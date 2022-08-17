@@ -1,0 +1,12 @@
+@import '../../styles/index';
+
+.info {
+    color: var(--color-text-info);
+    font-family: var(--SF-regular);
+    font-size: var(--size-font-info);
+    line-height: 110.7%;
+
+    @media (max-width: 576px) {
+        font-size: var(--size-font-info-mobile);
+    }
+}

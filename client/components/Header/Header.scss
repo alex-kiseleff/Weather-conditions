@@ -7,25 +7,25 @@
     height: 4.063rem;
     max-width: 100%;
 
+    @media (max-width: 576px) {
+        &--hidden {
+            display: none;
+        }
+    }
+
     &__container {
         align-items: center;
         display: flex;
         max-width: var(--screen-desktop);
-        padding: 1.094rem 1.438rem;
+        padding: 1.094rem 1.438rem 1.094rem 0.5rem;
     }
 
     &__title {
         color: var(--color-text-header);
     }
 
-    .logo {
-        height: 100%;
-        width: 50px;
-    }
-
-    .logo use {
-        height: 50px;
-        //padding: 1.094rem 1.438rem;
-        width: 50px;
+    &__logo {
+        height: 3rem;
+        width: 3.5rem;
     }
 }

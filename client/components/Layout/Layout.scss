@@ -1,13 +1,13 @@
 @import '../../styles/index';
 
 .layout {
-    max-width: var(--screen-desktop);
+    max-width: var(--size-screen-desktop);
     min-height: 100%;
 
     &__container {
-        display: flex;
+        display: inline-flex;
         flex-direction: column;
         height: 43.75rem;
-        max-width: 100%;
+        width: 100%;
     }
 }

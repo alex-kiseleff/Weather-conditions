@@ -1,0 +1,21 @@
+@import '../../styles/index';
+
+.hint {
+    align-items: center;
+    color: var(--color-text-hint);
+    display: flex;
+    flex-direction: column;
+    font-family: var(--SF-regular);
+    font-size: var(--size-font-hint);
+    line-height: 19px;
+
+    &__button {
+        background: inherit;
+        border-bottom: 1px dotted #fff;
+        color: var(--color-text-hint-button);
+
+        &--hidden {
+            display: none;
+        }
+    }
+}

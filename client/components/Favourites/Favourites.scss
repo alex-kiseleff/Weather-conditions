@@ -1,0 +1,19 @@
+@import '../../styles/index';
+
+.favourites {
+    &__input {
+        opacity: 0;
+        top: 0;
+        width: 0;
+    }
+
+    .icon-favourites {
+        cursor: pointer;
+        fill: none;
+
+        &--checked {
+            fill: var(--color-fill-favorite-checked);
+            stroke: var(--color-stroke-favorite-checked);
+        }
+    }
+}

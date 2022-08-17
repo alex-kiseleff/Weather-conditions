@@ -1,0 +1,42 @@
+@import '../../styles/index';
+
+.temperature-block {
+    align-items: center;
+    display: flex;
+
+    @media (max-width: 576px) {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__wrap-degrees {
+        background: linear-gradient(
+            180deg,
+            #fff 11.65%,
+            rgba(255, 255, 255, 0) 139.47%
+        );
+        background-clip: text;
+        font-family: var(--SF-bold);
+        font-size: var(--size-font-degrees);
+        line-height: 110.7%;
+        -webkit-text-fill-color: transparent;
+
+        @media (max-width: 576px) {
+            font-size: var(--size-font-degrees-mobile);
+        }
+    }
+
+    &__wrap-icons {
+        align-items: center;
+        display: flex;
+        height: 11.938rem;
+        justify-content: center;
+        width: 11.938rem;
+
+        @media (max-width: 576px) {
+            height: 8.25rem;
+            width: 8.25rem;
+        }
+    }
+}

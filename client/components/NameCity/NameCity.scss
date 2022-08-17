@@ -1,0 +1,12 @@
+@import '../../styles/index';
+
+.name-city {
+    color: var(--color-text-name-city);
+    font-family: var(--SF-medium);
+    font-size: var(--size-font-name-city);
+    line-height: 110.7%;
+
+    @media (max-width: 576px) {
+        font-size: var(--size-font-name-city-mobile);
+    }
+}

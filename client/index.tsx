@@ -1,6 +1,5 @@
 /**
- * @component - корневой компонент приложения, с подключением
- * файлов с глобальными стилями, шрифтами и переменными.
+ * @component - корневой компонент приложения.
  */
 import React from 'react';
 import { createRoot } from 'react-dom/client';

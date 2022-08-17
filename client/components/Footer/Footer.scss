@@ -2,8 +2,8 @@
 
 .footer {
     background: var(--color-bg-footer);
-    height: 4.063rem;
     max-width: 100%;
+    min-height: 4.063rem;
 
     &__container {
         flex-shrink: 0;

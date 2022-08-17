@@ -1,11 +1,12 @@
 @import '../../styles/index';
 
-.main-page {
+.main {
     background: var(--color-bg-page-main);
     height: 100%;
     max-width: var(--screen-desktop);
+    padding-top: 5rem;
 
-    &__container {
-        background: #000;
+    @media (max-width: 576px) {
+        padding-top: 1.25rem;
     }
 }

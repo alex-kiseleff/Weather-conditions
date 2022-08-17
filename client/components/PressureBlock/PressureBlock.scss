@@ -1,0 +1,28 @@
+@import '../../styles/index';
+
+.pressure-block {
+    align-items: center;
+    display: flex;
+
+    &__text {
+        color: var(--color-text-pressure);
+        font-family: var(--SF-regular);
+        font-size: var(--size-font-pressure-text);
+        line-height: 1.188rem;
+
+        @media (max-width: 576px) {
+            font-size: var(--size-font-pressure-text-mobile);
+        }
+    }
+
+    &__icon-barometer {
+        height: 1.5rem;
+        margin-right: 0.5rem;
+        width: 1.5rem;
+
+        @media (max-width: 576px) {
+            height: 1.313rem;
+            width: 1.313rem;
+        }
+    }
+}

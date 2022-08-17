@@ -1,0 +1,30 @@
+@import '../../styles/index';
+
+.button-come-back {
+    align-items: center;
+    background: inherit;
+    display: flex;
+    transition: var(--durations-400ms);
+
+    &:hover {
+        padding-left: 1rem;
+        transition: var(--durations-400ms);
+    }
+
+    &__text {
+        color: var(--color-text-button-come-back);
+        font-family: var(--SF-regular);
+        font-size: var(--size-font-button-come-back);
+        line-height: 1rem;
+
+        @media (max-width: 576px) {
+            display: none;
+        }
+    }
+
+    &__arrow-come-back {
+        height: 1.063rem;
+        margin-right: 1.188rem;
+        width: 0.625rem;
+    }
+}

@@ -1,17 +1,45 @@
 :root {
     /* цвета */
     --color-bg-page-main: #161b30;
-    --color-bg-page-favorite: #161b30;
     --color-bg-page-search: #161b30;
     --color-bg-header: #2a2f45;
     --color-bg-footer: #161b30;
+    --color-bg-city-card: rgba(41, 46, 68, 0.5);
+    --color-bg-input-search: #2a2f45;
     --color-text-header: #fff;
+    --color-text-input-search: #fff;
+    --color-text-input-search-label: #8a91ab;
+    --color-text-hint: #8a91ab;
+    --color-text-button-come-back: #8a91ab;
+    --color-text-hint-button: #fff;
+    --color-text-name-city: #fff;
+    --color-text-degrees-city-card: #fff;
+    --color-text-info: #fff;
+    --color-text-pressure: #fff;
+    --color-text-sunset: #8a91ab;
+    --color-stroke-favorite-checked: #8a91ab;
+    --color-fill-favorite-checked: #8a91ab;
 
     /* размеры */
-    --screen-desktop: 1152px;
+    --size-screen-desktop: 72rem;
+    --size-font-input-search: 1rem;
+    --size-font-hint: 1rem;
+    --size-font-name-city: 3.5rem;
+    --size-font-name-city-mobile: 1.5rem;
+    --size-font-name-city-card: 0.875rem;
+    --size-font-info: 1rem;
+    --size-font-info-mobile: 0.875rem;
+    --size-font-pressure-text: 1rem;
+    --size-font-pressure-text-mobile: 0.875rem;
+    --size-font-degrees: 8.125rem;
+    --size-font-degrees-mobile: 7.5rem;
+    --size-font-degrees-city-card: 2.5rem;
+    --size-font-sunset: 1rem;
+    --size-font-sunset-mobile: 0.875rem;
+    --size-font-button-come-back: 1rem;
 
     /* временные задержки */
-    --durations-300ms: '0.3s';
+    --durations-400ms: 0.4s;
 
     /* шрифты */
     --SF-bold: 'SF Pro Display bold';
@@ -19,13 +47,13 @@
     --SF-regular: 'SF Pro Display regular';
 
     /*break point*/
-    --min-width-XS: '0';
-    --max-width-SM: '575.9px';
-    --min-width-SM: '576px';
-    --max-width-MD: '767.9px';
-    --min-width-MD: '768px';
-    --max-width-LG: '991.9px';
-    --min-width-LG: '992px';
-    --max-width-XL: '1399.9px';
-    --min-width-XL: '1400px';
+    //--min-width-XS: 0;
+    //--max-width-SM: 575.9px;
+    //--min-width-SM: 576px;
+    //--max-width-MD: 767.9px;
+    //--min-width-MD: 768px;
+    //--max-width-LG: 991.9px;
+    //--min-width-LG: 992px;
+    //--max-width-XL: 1399.9px;
+    //--min-width-XL: 1400px;
 }
