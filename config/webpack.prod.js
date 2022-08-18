@@ -10,7 +10,7 @@ module.exports = merge(common, {
 	output: {
 		path: paths.build,
 		publicPath: '/',
-		filename: 'js/[name][contenthash].bundle.js',
+		filename: 'js/[name].js',
 		clean: true,
 	},
 	module: {
@@ -30,7 +30,7 @@ module.exports = merge(common, {
 	},
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: 'styles/[contenthash][name].css',
+			filename: 'styles/[name].css',
 			chunkFilename: '[id].css',
 		}),
 	],

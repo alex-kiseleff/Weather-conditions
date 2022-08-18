@@ -9,7 +9,7 @@ module.exports = merge(common, {
 	output: {
 		path: paths.build,
 		publicPath: '/',
-		filename: '[name].js',
+		filename: 'js/[name].js',
 		clean: true,
 	},
 	devServer: {
@@ -58,7 +58,7 @@ module.exports = merge(common, {
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
-			template: `${paths.client}/index.html`,
+			template: `${paths.public}/index.html`,
 			filename: `index.html`,
 			minify: {
 				collapseWhitespace: true,

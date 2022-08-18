@@ -29,9 +29,11 @@ const Details = () => {
     const { currentCity, favourites } = state;
     const { checked } = currentCity;
 
-    if (!currentCity.id) {
-        navigate('/');
-    }
+    useEffect(() => {
+        if (!currentCity.id) {
+            navigate('/');
+        }
+    }, []);
 
     useEffect(() => {
         if (checked) {

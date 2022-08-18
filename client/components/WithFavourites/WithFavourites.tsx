@@ -12,8 +12,6 @@ const WithFavourites = () => {
     const { state } = useContext(Context);
     const { favourites } = state;
 
-    console.log({ state });
-
     return (
         <div className={'with-favourites'}>
             <InputSearch />

@@ -10,35 +10,36 @@
             type="image/x-icon"
             sizes="512x512"
         />
-        <link rel="manifest" href="./manifest.json" />
+        <link rel="manifest" href="/public/manifest.json" />
         <title>Weathers</title>
     </head>
 
     <body>
         <div id="root"></div>
+
         <script>
             if ('serviceWorker' in navigator) {
-                window.addEventListener('load', function () {
+                window.addEventListener('load', () => {
                     navigator.serviceWorker
-                        .register('./serviceWorker.js')
+                        .register('/public/serviceWorker.js')
                         .then(
-                            function (registration) {
+                            (registration) => {
                                 // Registration was successful
                                 console.log(
                                     'ServiceWorker registration successful with scope: ',
                                     registration.scope
                                 );
                             },
-                            function (err) {
-                                // registration failed :(
+                            (error) => {
+                                // registration failed
                                 console.log(
                                     'ServiceWorker registration failed: ',
-                                    err
+                                    error
                                 );
                             }
                         )
-                        .catch(function (err) {
-                            console.log(err);
+                        .catch((error) => {
+                            console.log(error);
                         });
                 });
             } else {

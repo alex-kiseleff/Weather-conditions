@@ -10,7 +10,6 @@ import State from '../../state';
 import Layout from '../Layout/Layout';
 import Main from '../../pages/Main/Main';
 import Details from '../../pages/Details/Details';
-import Page404 from '../../pages/Page404/Page404';
 
 const App = () => {
     const [state, setState] = useState(State);
@@ -20,7 +19,6 @@ const App = () => {
                 <Routes>
                     <Route path={'/'} element={Layout(<Main />)} />
                     <Route path={'/details'} element={Layout(<Details />)} />
-                    <Route path={'*'} element={<Page404 />} />
                 </Routes>
             </BrowserRouter>
         </Context.Provider>
