@@ -3,7 +3,7 @@
  * о погоде в городе.
  */
 import React, { useContext, useEffect } from 'react';
-import Context from '../../context';
+import StateContext from '../../contexts/stateContext';
 import ButtonComeBack from '../../components/ButtonComeBack/ButtonComeBack';
 import Info from '../../components/Info/Info';
 import InputFavorite from '../../components/Favourites/Favourites';
@@ -25,7 +25,11 @@ const propsIconFavourites: IIcons = {
 const Details = () => {
     const navigate = useNavigate();
     const location = useLocation();
-    const { state, setState } = useContext(Context);
+    const { state, setState } = useContext(StateContext);
+
+    if (!state.currentCity) {
+        return <></>;
+    }
     const { currentCity, favourites } = state;
     const { checked } = currentCity;
 
@@ -36,16 +40,23 @@ const Details = () => {
     }, []);
 
     useEffect(() => {
-        if (checked) {
-            const uniqTest = favourites.some(
-                (item: IData) => item.id === currentCity.id
-            );
-            if (uniqTest) {
-                return;
-            }
+        if (location.pathname !== '/details') {
+            return;
+        }
+
+        const index = favourites?.findIndex(
+            (item: IData) => item.id === currentCity.id
+        );
+
+        if (!checked && index === -1) {
+            return;
+        }
+
+        if (checked && index === -1) {
             favourites.push(currentCity);
         }
-        if (!checked && location.pathname === '/details') {
+
+        if (!checked && index !== -1) {
             const newFavourites = favourites.filter(
                 (item: IData) => item.id !== currentCity.id
             );

@@ -4,7 +4,7 @@
  */
 import React, { useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Context from '../../context';
+import StateContext from '../../contexts/stateContext';
 import Icons from '../Icons';
 import './ButtonComeBack.scss';
 
@@ -16,7 +16,7 @@ const propsIconComeBack = {
 };
 
 const ButtonComeBack = () => {
-    const { state, setState } = useContext(Context);
+    const { state, setState } = useContext(StateContext);
     const navigate = useNavigate();
 
     const handlerClick = () => {

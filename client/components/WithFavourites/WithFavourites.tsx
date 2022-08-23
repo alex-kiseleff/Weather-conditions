@@ -2,14 +2,14 @@
  * @component Favorite - страница c избранными городами.
  */
 import React, { useContext } from 'react';
-import Context from '../../context';
+import StateContext from '../../contexts/stateContext';
 import { IData } from '../../interfaces/interfaces';
 import CityCard from '../CityCard/CityCard';
 import InputSearch from '../InputSearch/InputSearch';
 import './WithFavourites.scss';
 
 const WithFavourites = () => {
-    const { state } = useContext(Context);
+    const { state } = useContext(StateContext);
     const { favourites } = state;
 
     return (

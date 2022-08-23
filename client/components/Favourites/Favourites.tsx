@@ -4,14 +4,19 @@
  * @param {IIcons} props - реквизиты для картинки.
  * @returns {ReactElement}
  */
-import React, { FC, useContext } from 'react';
-import Context from '../../context';
+import React, { FC, ReactElement, useContext } from 'react';
+import StateContext from '../../contexts/stateContext';
 import { IIcons } from '../../interfaces/interfaces';
 import Icons from '../Icons/Icons';
 import './Favourites.scss';
 
-const Favourites: FC<IIcons> = (props) => {
-    const { state, setState } = useContext(Context);
+const Favourites: FC<IIcons> = (props): ReactElement => {
+    const { state, setState } = useContext(StateContext);
+
+    if (!state.currentCity) {
+        return <></>;
+    }
+
     const {
         currentCity: { checked },
     } = state;

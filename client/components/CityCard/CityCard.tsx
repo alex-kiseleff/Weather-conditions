@@ -6,14 +6,14 @@
  */
 import React, { FC, MouseEvent, useContext } from 'react';
 import { NavLink } from 'react-router-dom';
-import Context from '../../context';
+import StateContext from '../../contexts/stateContext';
 import { IData } from '../../interfaces/interfaces';
 import NameCity from '../NameCity/NameCity';
 import TemperatureBlock from '../TemperatureBlock/TemperatureBlock';
 import './CityCard.scss';
 
 const CityCard: FC<IData> = (props) => {
-    const { state, setState } = useContext(Context);
+    const { state, setState } = useContext(StateContext);
     const { favourites } = state;
 
     const handlerClick = (e: MouseEvent) => {

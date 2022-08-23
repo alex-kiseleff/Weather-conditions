@@ -1,7 +1,6 @@
 import { IState } from './interfaces/interfaces';
 
 const State: IState = {
-    inputValue: '',
     currentCity: {
         id: '',
         city: '',

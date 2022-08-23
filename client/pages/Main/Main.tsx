@@ -3,21 +3,23 @@
  */
 import React, { useContext, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import HintContext from '../../contexts/HintContext';
+import StateContext from '../../contexts/stateContext';
 import WithFavourites from '../../components/WithFavourites/WithFavourites';
 import WithoutFavourites from '../../components/WithoutFavourites/WithoutFavourites';
-import Context from '../../context';
 import './Main.scss';
 
 const Main = () => {
     const navigate = useNavigate();
 
-    const { state, setState } = useContext(Context);
+    const { setHint } = useContext(HintContext);
+    const { state } = useContext(StateContext);
     const { favourites } = state;
 
     useEffect(() => {
-        if (state.currentCity.id) {
-            setState({ ...state, inputValue: '' });
+        if (state?.currentCity?.id) {
             navigate('/details');
+            setHint('');
         }
     }, [state?.currentCity?.id]);
 

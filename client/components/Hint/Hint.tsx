@@ -6,17 +6,17 @@
  * @returns {ReactElement}
  */
 import React, { FC, MouseEvent, ReactElement, useContext } from 'react';
-import Context from '../../context';
+import HintContext from '../../contexts/HintContext';
 import { IHint } from '../../interfaces/interfaces';
 import './Hint.scss';
 
 const Hint: FC<IHint> = ({ textOne, textTwo, textButton }): ReactElement => {
-    const { state, setState } = useContext(Context);
+    const { setHint } = useContext(HintContext);
 
     const handlerClick = (e: MouseEvent) => {
         e.preventDefault();
         const target = e.target as HTMLButtonElement;
-        setState({ ...state, inputValue: target.value });
+        setHint(target.value);
     };
     return (
         <div className={'hint'}>

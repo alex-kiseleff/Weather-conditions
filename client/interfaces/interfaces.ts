@@ -14,7 +14,6 @@ export interface IData {
 }
 
 export interface IState {
-	inputValue: string;
 	currentCity: IData;
 	favourites: Array<IData>;
 }
